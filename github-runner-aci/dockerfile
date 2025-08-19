@@ -30,6 +30,10 @@ RUN ["pwsh", "InstallAgent.ps1"]
 
 COPY ConfigureAndRun.ps1 ConfigureAndRun.ps1
 
-ENTRYPOINT ["pwsh"]
+#ENTRYPOINT ["pwsh"]
 
-CMD ["ConfigureAndRun.ps1"]
+#CMD ["/bin/bash -c tail -f /dev/null"]
+
+#CMD ["ConfigureAndRun.ps1"]
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
